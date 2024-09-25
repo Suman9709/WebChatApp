@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-const ConversationItems = ({props}) => {
+const ConversationItems = ({ name = '', lastMessage, timeStamp }) => {
   return (
     <div className='conversation-container'>
-   <p className='con-icon'>{props.name[0]}</p>
-   <p className='con-title'>{props.name}</p>
-   <p className='con-lastMessage'>{props.lastMessage}</p>
-   <p className='con-timeStamp'>{props.timeStamp}</p>
+      <p className='con-icon'>{name ? name[0] : 'N/A'}</p>
+      <p className='con-title'>{name}</p>
+      <p className='con-lastMessage'>{lastMessage}</p>
+      <p className='con-timeStamp'>{timeStamp}</p>
     </div>
-  )
-}
+  );
+};
 
-export default ConversationItems
+export default ConversationItems;

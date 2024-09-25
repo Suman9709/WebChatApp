@@ -1,16 +1,17 @@
-import React from 'react'
-import "./myStyle.css"
+import React from "react";
 
-const MessageSelf = () => {
-    var prop2 = { name: "You", message: "This is a sample message" }
-    return (
-        <div className='self-message-container'>
-            <div className='messageBox'>
-                <p>{prop2.message}</p>
-                <p className='self-timeStamp'>12:00am</p>
-            </div>
-        </div>
-    )
+function MessageSelf({ props }) {
+  // console.log("Message self Prop : ", props);
+  return (
+    <div className="self-message-container">
+      <div className="messageBox">
+        <p style={{ color: "black" }}>{props.content}</p>
+        {/* <p className="self-timeStamp" style={{ color: "black" }}>
+          12:00am
+        </p> */}
+      </div>
+    </div>
+  );
 }
 
-export default MessageSelf
+export default MessageSelf;
